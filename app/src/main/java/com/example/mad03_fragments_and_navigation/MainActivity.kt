@@ -2,6 +2,7 @@ package com.example.mad03_fragments_and_navigation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -31,5 +32,29 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, drawerLayout)
+    }
+    override fun onStart(){
+        super.onStart()
+        Log.i("Mainactivity","I am in onStart")
+    }
+    override fun onPause(){
+        super.onPause()
+        Log.i("Mainactivity","I am in onPause")
+    }
+    override fun onResume(){
+        super.onResume()
+        Log.i("Mainactivity","I am in onResume")
+    }
+    override fun onDestroy(){
+        super.onDestroy()
+        Log.i("Mainactivity","I am in onDestroy")
+    }
+    override fun onRestart(){
+        super.onRestart()
+        Log.i("Mainactivity","I am in onRestart")
+    }
+    override fun onStop(){
+        super.onStop()
+        Log.i("Mainactivity","I am in onStop")
     }
 }
